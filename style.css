@@ -1,0 +1,376 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins';
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header.navbar-container {
+    position: fixed;
+    width: 100%;
+    max-width: 1600px;
+    padding-block: 1rem;
+    margin-inline: auto;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    z-index: 9999; /* biar navbar selalu di lapisan paling atas */
+    background-color: white;
+}
+
+#navbar-container {
+    position: sticky;
+}
+
+header.navbar-container .logo img {
+    width: 300px;
+}
+
+header.navbar-container .nav-list ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1 rem;
+}
+
+header.navbar-container .nav-list li { /* ngilangin titik2 pada list */
+    list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+
+    text-decoration: none; /* ngilangin underline di link */
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: #2C2C3C;
+
+    transition: all 0.2s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a {
+    background-color: #D46776;
+    color: #C4DCF5;
+}
+
+main {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 2rem 4rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+main .content {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {
+    margin-top: 2rem;
+}
+
+main .content .content-image {
+    flex: 1;
+}
+
+main .content .content-image img {
+    width: 300px;
+    min-width: 250px;
+    margin: auto;
+}
+
+main .content .content-description {
+    flex: 1 1;
+    margin-right: 300px;
+}
+
+main .content .content-description title {
+    margin-block: 1rem;
+    font-size: 3.5rem;
+}
+
+main .content .content-description p {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+}
+
+main .content .content-description button a {
+    padding: 0.8rem 2.5rem;
+    border: 3px solid transparent;
+    border-radius: 999px;
+    margin-block-start: 1rem;
+
+    background-color: #D46776;
+    font-family: 'Poppins';
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 500;
+    color: aliceblue;
+
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+main .content .content-description button a:hover {
+    border: 3px solid #D46776;
+    background-color: transparent;
+
+    color: #D46776;
+}
+
+/* ARTIKEL (SOLUTIONS) */
+.box {
+    width: 600px;
+    height: 400px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.5s ease;
+}
+
+.box:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Efek bayangan saat hover */
+}
+
+.box p {
+    color: aliceblue;
+    text-align: center;
+}
+
+blockquote {
+    color: aliceblue;
+}
+
+.box img {
+    width: 70%;
+    margin-top: 0;
+    height: auto;
+    border-radius: 20px;
+}
+
+.box:nth-child(odd) {
+    background-color: #D46776;
+}
+
+.box:nth-child(even) {
+    background-color: #D46776;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* ASIDE */
+.aside {
+    padding: 20px;
+    background-color: #C4DCF5;
+    width: 300px;
+    position: fixed;
+    inset-block: 0;
+    margin: 0;
+    inset-inline-end: 0;
+    display: none;
+}
+
+.aside figure img {
+    height: 250px;
+    width: auto;
+}
+
+.aside button {
+    padding: 0.5rem 1rem;
+    border: 3px solid transparent;
+    border-radius: 999px;
+    margin-block-start: 1rem;
+    background-color: white;
+    font-family: 'Poppins';
+    color: black;
+
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+}
+
+.aside button:hover {
+    border: 2px solid black;
+    background-color: transparent;
+    color: black;
+}
+
+/* ABOUT */
+#about {
+    margin-top: 3rem; /* Tambahkan margin atas untuk memisahkan konten */
+}
+
+.about .founder-box {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    background-color: #C4DCF5;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.5s ease;
+}
+
+.about .founder {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about .founder-box:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Efek bayangan saat hover */
+}
+
+.about .founder figure {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+.about .founder figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.about .founder section {
+    width: 100%;
+}
+
+.about .founder h2 {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.about .founder h4 {
+    font-size: 1rem;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.about .founder table {
+    margin: 0 auto;
+}
+
+/* FOOTER */
+footer {
+    position: sticky;
+    padding: 20px;
+    color: white;
+    background-color: #D46776;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    margin: 0 10px;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+.icon img {
+    width: 24px;
+    height: 24px;
+}
+
+
+/* Medium devices (768px dan di bawahnya) */
+@media screen and (max-width: 768px) {
+    header.navbar-container {
+        flex-direction: column;
+    }
+
+    header.navbar-container .nav-list ul {
+        flex-wrap: wrap;
+        column-gap: 0.5rem;
+    }
+    
+    main {
+        padding: 1rem 3rem;
+        flex-direction: column;
+    }
+
+    main .content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    main .content .content-description {
+        order: -1; /* Menggeser deskripsi konten ke atas */
+    }
+
+    main .content .content-description .title {
+        font-size: 3rem;
+    }
+
+    main .content .content-description p {
+        font-size: 1rem;
+    }
+
+    main .content .content-image {
+        order: -1; /* mengatur urutan konten dari susunan flex items. kita berikan -1, flex item yang bersangkutan akan bertempat pada urutan awal */
+    }
+
+    main .aside {
+        width: 100%; /* Mengisi lebar layar pada tablet dan mobile */
+        margin: 0 auto;
+        position: static;
+        order: 3; /* Menggeser aside ke bawah deskripsi konten */
+        padding: 20px;
+        background-color: #C4DCF5;
+    }
+
+    .about {
+        margin-top: 3rem;
+        order: 2;
+    }
+
+    .about .founder {
+        gap: 1rem;
+    }
+
+    .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .solutions-section {
+        padding-top: 2rem;
+    }
+}
